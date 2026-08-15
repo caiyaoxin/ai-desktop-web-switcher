@@ -1,19 +1,34 @@
-# AI Desktop Web Switcher
+<p align="center">
+  <img src="docs/logo.svg" alt="AI Desktop Web Switcher" width="96" height="96">
+</p>
 
-> Add a "Web" entry to any Electron AI desktop client: a sidebar button that opens the
-> web chat in the main area. **Ask quick questions on the web version — no API token consumed.**
+<h1 align="center">AI Desktop Web Switcher</h1>
 
-[中文说明](README.md) · [Porting guide](PORTING.md)
+<p align="center">
+  <strong>Add a "Web" entry to any Electron AI desktop client. Quick questions, no API token.</strong>
+</p>
 
-## In one line
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+  <a href="https://github.com/caiyaoxin/ai-desktop-web-switcher/stargazers"><img src="https://img.shields.io/github/stars/caiyaoxin/ai-desktop-web-switcher?style=social" alt="Stars"></a>
+  <a href="https://github.com/caiyaoxin/ai-desktop-web-switcher"><img src="https://img.shields.io/badge/platform-Windows-0078D6.svg" alt="Platform"></a>
+</p>
+
+<p align="center">
+  <a href="README.md">中文说明</a> · <a href="PORTING.md">Porting guide</a>
+</p>
+
+## What it is
 
 AI desktop apps use the token-billed API. But many quick questions — a translation, a
-calculation, small talk — are free on the web chat. This tool keeps the web version and your
-client side by side, one click apart.
+calculation, small talk — are free on the web chat. This tool adds a sidebar button that opens
+the web chat in the main area, side by side with your API conversation, one click apart.
 
 ## Demo
 
-![Demo](docs/demo.gif)
+<p align="center">
+  <img src="docs/demo.gif" alt="Demo" width="720">
+</p>
 
 Click the "DeepSeek 网页版" button in the sidebar → the web chat opens in the main area; click
 the button again (or "New Chat") → it closes and you are back to your conversation.
@@ -40,7 +55,7 @@ it is the same mechanism these clients already use to load their own UI.
 > Prerequisites: Windows and Node.js (the script uses `npx @electron/asar`).
 
 ```powershell
-git clone https://github.com/<your-username>/ai-desktop-web-switcher.git
+git clone https://github.com/caiyaoxin/ai-desktop-web-switcher.git
 cd ai-desktop-web-switcher
 .\install.ps1                       # defaults to deepseek-harness-desktop
 .\install.ps1 -Label "Free Web Chat"

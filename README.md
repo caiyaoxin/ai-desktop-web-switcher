@@ -1,20 +1,35 @@
-# AI Desktop Web Switcher
+<p align="center">
+  <img src="docs/logo.svg" alt="AI Desktop Web Switcher" width="96" height="96">
+</p>
 
-> 给你的 Electron AI 桌面客户端加一个「网页版并排」入口：左侧栏一个按钮，点击就在主区域
-> 打开网页版聊天。**简单提问用网页版，不消耗 API token。**
+<h1 align="center">AI Desktop Web Switcher</h1>
 
-[English](README.en.md) · [移植指南](PORTING.md)
+<p align="center">
+  <strong>给 Electron AI 桌面客户端加一个「网页版并排」入口，简单提问不花 API token。</strong>
+</p>
 
-## 一句话
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+  <a href="https://github.com/caiyaoxin/ai-desktop-web-switcher/stargazers"><img src="https://img.shields.io/github/stars/caiyaoxin/ai-desktop-web-switcher?style=social" alt="Stars"></a>
+  <a href="https://github.com/caiyaoxin/ai-desktop-web-switcher"><img src="https://img.shields.io/badge/platform-Windows-0078D6.svg" alt="Platform"></a>
+</p>
+
+<p align="center">
+  <a href="README.en.md">English</a> · <a href="PORTING.md">移植指南</a>
+</p>
+
+## 这是什么
 
 AI 桌面端走 API 按 token 计费；但很多简单问题——翻译、算数、闲聊——网页版免费就够。
-本工具让网页版和你的客户端并存，一键切换，互不干扰。
+本工具在客户端左侧栏加一个按钮，点击就在主区域打开网页版聊天，和 API 对话并存、一键切换、互不干扰。
 
 ## 演示
 
-![演示动画](docs/demo.gif)
+<p align="center">
+  <img src="docs/demo.gif" alt="演示动画" width="720">
+</p>
 
-左侧栏点击「DeepSeek 网页版」按钮 → 主区域打开网页版；再点按钮或点「新对话」→ 关闭，回到原对话。
+左侧栏点击「DeepSeek 网页版」→ 主区域打开网页版；再点按钮或点「新对话」→ 关闭，回到原对话。
 
 ## 特性
 
@@ -36,7 +51,7 @@ AI 桌面端走 API 按 token 计费；但很多简单问题——翻译、算�
 > 前置：Windows、Node.js（脚本用 `npx @electron/asar`）。
 
 ```powershell
-git clone https://github.com/<你的用户名>/ai-desktop-web-switcher.git
+git clone https://github.com/caiyaoxin/ai-desktop-web-switcher.git
 cd ai-desktop-web-switcher
 .\install.ps1                       # 默认接入 deepseek-harness-desktop
 .\install.ps1 -Label "网页版免费"     # 自定义按钮名称
