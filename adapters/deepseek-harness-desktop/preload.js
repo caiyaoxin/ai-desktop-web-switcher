@@ -7,12 +7,6 @@ contextBridge.exposeInMainWorld('desktopWindow', Object.freeze({
   toggleMaximize: () => ipcRenderer.send('desktop:window-control', 'toggle-maximize'),
   close: () => ipcRenderer.send('desktop:window-control', 'close'),
   getState: () => ipcRenderer.invoke('desktop:get-window-state'),
-  toggleDeepseek: width => ipcRenderer.send('desktop:toggle-deepseek', width),
-  onDeepseekChanged: callback => {
-    const listener = (_event, visible) => callback(visible)
-    ipcRenderer.on('desktop:deepseek-changed', listener)
-    return () => ipcRenderer.removeListener('desktop:deepseek-changed', listener)
-  },
   onStateChange: callback => {
     const listener = (_event, state) => callback(state)
     ipcRenderer.on('desktop:window-state', listener)
@@ -22,5 +16,15 @@ contextBridge.exposeInMainWorld('desktopWindow', Object.freeze({
     const listener = (_event, title) => callback(title)
     ipcRenderer.on('desktop:page-title', listener)
     return () => ipcRenderer.removeListener('desktop:page-title', listener)
+  },
+}))
+
+// web-switcher bridge (added by the patch)
+contextBridge.exposeInMainWorld('webSwitcher', Object.freeze({
+  toggle: width => ipcRenderer.send('web-switcher:toggle', width),
+  onChanged: callback => {
+    const listener = (_event, visible) => callback(visible)
+    ipcRenderer.on('web-switcher:changed', listener)
+    return () => ipcRenderer.removeListener('web-switcher:changed', listener)
   },
 }))
