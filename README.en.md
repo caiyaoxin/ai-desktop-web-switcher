@@ -11,6 +11,13 @@ AI desktop apps use the token-billed API. But many quick questions — a transla
 calculation, small talk — are free on the web chat. This tool keeps the web version and your
 client side by side, one click apart.
 
+## Demo
+
+![Demo](docs/demo.gif)
+
+Click the "DeepSeek 网页版" button in the sidebar → the web chat opens in the main area; click
+the button again (or "New Chat") → it closes and you are back to your conversation.
+
 ## Features
 
 - 🧭 **Sidebar button** — styled like "New Chat"; label and URL customizable
